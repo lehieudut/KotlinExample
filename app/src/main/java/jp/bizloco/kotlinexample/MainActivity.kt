@@ -18,7 +18,7 @@ import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
-    val URL: String = "https://gitlab.com/lehieudut/astronomyquotesserver/raw/master/astronomy_quotes.json"
+    val URL: String = "https://raw.githubusercontent.com/lehieudut/KotlinExample/master/astronomy_quotes.json"
     // declare nullable variable
     private var mAdapter: RecyclerViewAdapter? = null
     // init Array list
