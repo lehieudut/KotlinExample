@@ -10,24 +10,26 @@ class MyClass {
 
         @JvmStatic
         fun main(arg: Array<String>) {
-            val a = Person("Hieu")
-            println(a.isHandsome())
-            val b = Student("Hieu")
+            val a = Student(1233, "10D3")
+            val b = Student(1234, "10ES", "Good")
+            b.name = "Hieu"
             println(b.isHandsome())
-        }
 
+        }
     }
 }
 
-open class Person(open var name:String) {
+open class Person() {
 
-    var old: Int? = null
+    var name: String? = null
 
     fun isHandsome(): Boolean {
         return name.equals("Hieu")
     }
 }
 
-class Student(override var name:String) : Person(name) {
-    var id:String? = null
+class Student(var id: Int, var className: String) : Person() {
+
+    constructor(id: Int, className: String, rank: String) : this(id, className)
+
 }

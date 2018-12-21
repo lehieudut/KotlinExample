@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
 //        })
 
         //use lamda
-        val listener = ItemClickListener { position ->  Toast.makeText(this@MainActivity, mList.get(position), Toast.LENGTH_SHORT).show()}
+        val listener = ItemClickListener { position -> Toast.makeText(this@MainActivity, mList.get(position), Toast.LENGTH_SHORT).show() }
         mAdapter = RecyclerViewAdapter(this, mList, listener)
 
         mRecyclerView.setLayoutManager(GridLayoutManager(this, 3))
